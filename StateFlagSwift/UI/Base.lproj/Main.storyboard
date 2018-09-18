@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVv-q1-qVJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--State Collection View Controller-->
+        <scene sceneID="DfL-DK-gLD">
+            <objects>
+                <collectionViewController id="YVv-q1-qVJ" customClass="StateCollectionViewController" customModule="StateFlagSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="N2w-mp-DkP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KvD-9L-eMs">
+                            <size key="itemSize" width="172" height="156"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stateCell" id="Van-yk-hoD" customClass="StateCollectionViewCell" customModule="StateFlagSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="172" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="156"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="egI-uT-IHd">
+                                            <rect key="frame" x="0.0" y="14" width="172" height="152"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mFY-Aj-0ff">
+                                                    <rect key="frame" x="20" y="0.0" width="132" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mFY-Aj-0ff" secondAttribute="height" multiplier="3:2" id="z0q-8W-cfD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-aj-4sK">
+                                                    <rect key="frame" x="65" y="88" width="42" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="egI-uT-IHd" firstAttribute="height" secondItem="Van-yk-hoD" secondAttribute="height" id="7h0-Tg-yr5"/>
+                                    <constraint firstItem="egI-uT-IHd" firstAttribute="centerX" secondItem="Van-yk-hoD" secondAttribute="centerX" id="RaC-YK-6Fj"/>
+                                    <constraint firstItem="egI-uT-IHd" firstAttribute="width" secondItem="Van-yk-hoD" secondAttribute="width" id="rkF-uD-W6N"/>
+                                    <constraint firstItem="egI-uT-IHd" firstAttribute="centerY" secondItem="Van-yk-hoD" secondAttribute="centerY" id="vgU-17-ssT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="flagImageView" destination="mFY-Aj-0ff" id="gwS-Y0-j7D"/>
+                                    <outlet property="nameLabel" destination="EHH-aj-4sK" id="MuX-SX-U6S"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="YVv-q1-qVJ" id="WOB-HT-9VG"/>
+                            <outlet property="delegate" destination="YVv-q1-qVJ" id="vOI-i8-Za2"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Awf-Dn-qJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="251.42428785607197"/>
+        </scene>
+    </scenes>
+</document>
